@@ -1,0 +1,188 @@
+ul.wpinstagram, 
+ul.wpinstagram li, 
+ul.wpinstagram li a {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+ul.wpinstagram {
+	overflow: hidden;
+	display: block;
+	list-style-type: none;
+}
+
+ul.wpinstagram li {
+	float: left;
+	position: relative;
+}
+
+ul.wpinstagram.centered {
+	margin: 0 auto !important;
+}
+
+ul.wpinstagram li a {
+	line-height: 0px;
+	font-size: 0px;
+}
+
+#fancybox-img {
+	cursor: pointer;
+}
+
+#fancybox-left, #fancybox-right {
+	width: 15% !important;
+}
+
+#fancybox-title a {
+	color: #FFF;
+	text-decoration: underline;
+}
+
+#fancybox-wrap {
+	width: auto !important;
+}
+
+#fancybox-title {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+#fancybox-outer:hover #fancybox-title {
+	opacity: 1;
+}
+
+.wpinstagram-slideshow {
+	overflow: hidden;
+}
+
+.wpinstagram-slideshow li {
+	display: none;
+}
+
+.wpinstagram-slideshow li:first-child {
+	display: block;
+}
+
+.wpinstagram li .social {
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	display: none;
+}
+
+.wpinstagram li:hover .social {
+	display: block;
+}
+
+.wpinstagram li .social a.facebook {
+	background: url('img/facebook-large.png') no-repeat center center;
+	width: 16px;
+	height: 16px;	
+	float: right;
+	display: block;
+	opacity: 0.6;	
+}
+
+.wpinstagram li .social a.twitter {
+	background: url('img/twitter-large.png') no-repeat center center;
+	width: 16px;
+	height: 16px;	
+	float: right;
+	display: block;
+	position: relative;
+	left: -5px;
+	opacity: 0.6;	
+}
+
+.wpinstagram li .social a:hover {
+	opacity: 1;
+}
+
+.wpinstagram .wpcaption {
+	display: none;
+}
+
+.wpinstagram li.paged {
+	display: none;
+}
+
+.wpinstagram li.paged.visible {
+	display: block;
+}
+
+/*
+ Pagination styling
+
+ Override these defaults to style the pagination links on the grid viewer.
+*/
+
+.wppages {
+	margin-top: 5px;
+	float: left;
+	border-right: 1px solid #666;
+	margin-bottom: 10px;
+}
+
+.wppages .page {
+	padding: 2px 5px;
+	float: left;
+	border: 1px solid #666;
+	border-right: 0px none;
+}
+
+.wppages .page:hover {
+	background: #666;
+	color: #FFF;
+	text-decoration: none;
+}
+
+.wppages .page.first {
+	font-weight: bold;
+}
+
+.wppages .page.first:hover {
+	background: transparent;
+	color: #333;
+}
+
+/*
+ Responsive styling
+
+ Enter css rules that are required to make the widget appear correctly when it is responsive.
+*/
+
+.wpinstagram.responsive {
+	
+}
+
+/*
+ Frontend warning styling
+
+ Customise your frontend warnings (if enabled)
+*/
+
+.wpinstagram-error {
+	text-align: center;
+	background: #fcf8e3; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fcf8e3 0%, #f8efc0 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcf8e3), color-stop(100%,#f8efc0)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fcf8e3 0%,#f8efc0 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fcf8e3 0%,#f8efc0 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fcf8e3 0%,#f8efc0 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fcf8e3 0%,#f8efc0 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcf8e3', endColorstr='#f8efc0',GradientType=0 ); /* IE6-9 */
+	color: #000;
+	border: 1px solid #f5e79e;
+	border-radius: 3px;
+	padding: 10px;
+}
+
+.wpinstagram-error b {
+	color: #000;
+	font-size: 110%;
+}
+
+.wpinstagram-error-description {
+	margin-bottom: 0px !important;
+}
