@@ -3,7 +3,7 @@ Contributors: jbenders
 Tags: widgets, photos, instagram
 Requires at least: 3.0
 Tested up to: 4.3
-Stable tag: 2.0.10
+Stable tag: 2.1.0
 
 A comprehensive sidebar widget that can show your latest photos, tagged
 photos, photos from a location, your favourite photos, your feed, other users photos. Can be shown
@@ -18,6 +18,8 @@ Display your latest photos, tagged photos, photos from a place or location, your
 To get started, download and activate our widget from this page or within the Wordpress plugin interface. Drag and drop the Instagram Widget into one of your widget areas and then click on the Connect To Instagram button.
 
 You can find your widget management area under your Appearance menu.
+
+Two shortcodes are available, [instagram-post] and [instagram-widget]. You can read more about their configuration on our shortcode help page: http://wordpress.ink361.com/help/shortcode
 
 == Screenshots ==
 
@@ -43,7 +45,13 @@ Installation as usual.
 For more installation options please refer to
 http://wordpress.ink361.com/help/installing
 
+For information regarding the use of shortcodes please refer to
+http://wordpress.ink361.com/help/shortcode
+
 == Changelog ==
+
+= 2.1.0 =
+* Added shortcode support for embedding photos and widgets into posts - see http://wordpress.ink361.com/help/shortcode for more information
 
 = 2.0.10 =
 * Small styling improvement for video.

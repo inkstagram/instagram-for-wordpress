@@ -44,7 +44,11 @@ For more installation options please refer to http://wordpress.ink361.com/help/i
 
 ## Changelog
 
-= 2.0.10 =
+### 2.1.0 
+* Added shortcode support for embedding photos and widgets into posts - see http://wordpress.ink361.com/help/shortcode for more information
+
+
+### 2.0.10 
 * Small styling improvement for video.
 * fixed description not showing.
 * Added support for new image formats.
