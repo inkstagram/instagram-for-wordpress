@@ -2,7 +2,7 @@ function lightbox(lparams) {
 	var lbox = {};
 	lbox.params = lparams;
 
-	lbox.initialize = function() {
+	lbox.initialize = function(window.wpigplugJS) {
 
 		this.lboxWrapper = jQuery('#lboxWrapper');
 
@@ -111,7 +111,7 @@ function lightbox(lparams) {
 		this.wrapper.remove();
 	};
 
-	lbox.initialize();
+	lbox.initialize(window.wpigplugJS.jQuery);
 
 	return lbox;
 }
