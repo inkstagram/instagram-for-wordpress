@@ -4,7 +4,7 @@
 * Tags: widgets, photos, instagram
 * Requires at least WordPress version: 3.0
 * Tested up to version: 4.3.1
-* Stable tag: 2.1.3
+* Stable tag: 2.1.4
 
 A comprehensive sidebar widget that can show your latest photos, tagged photos, photos from a location, your favourite photos, your feed, other users photos. Can be shown in three ways with a Grid, Grid with paging and slideshow options.
 
@@ -43,6 +43,9 @@ Installation as usual.
 For more installation options please refer to http://wordpress.ink361.com/help/installing
 
 ## Changelog
+
+### 2.1.4
+* bug fix where slideshow wouldnt work 
 
 ### 2.1.3 
 * bug fix where configuration lightbox wouldnt load 
