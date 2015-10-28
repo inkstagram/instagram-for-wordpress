@@ -28,6 +28,7 @@
       <input type="hidden" name="responsive"	   value="<?php	print $details->settings['responsive']?>">
       <input type="hidden" name="sharing"	       value="<?php	print $details->settings['sharing']?>">
       <input type="hidden" name="verbose"	       value="<?php	print $details->settings['verbose']?>">
+      <input type="hidden" name="celebPick"	       value="<?php	print $details->settings['celebPick']?>">
       <input type="hidden" name="tagCompare"     value="<?php print htmlspecialchars($details->settings['tagCompare']) ?>">
       <input type="hidden" name="location"       value="<?php print htmlspecialchars($details->settings['location']) ?>">
       <input type="hidden" name="latitude"       value="<?php print htmlspecialchars($details->settings['latitude']) ?>">
@@ -45,6 +46,8 @@
           $customTitle = 'Your Instagram feed';
         } else if ($details->settings['display'] === 'popular') {
           $customTitle = 'Popular on Instagram';
+        } else if ($details->settings['display'] === 'celebs') {
+          $customTitle = "Celebrity Instagrams"; 
         } else if ($details->settings['display'] === 'user') {
           $customTitle = '@' . $details->settings['username'] . " Instagrams"; 
         } else if ($details->settings['display'] === 'tags') {
@@ -139,6 +142,7 @@
                 <option value="feed" 	    <?php if ($details->settings['display'] === 'feed') 	   { echo "SELECTED"; } ?>>My Feed</option>
                 <option value="popular" 	<?php if ($details->settings['display'] === 'popular') 	 { echo "SELECTED"; } ?>>Popular Feed</option>
                 <option value="user" 	    <?php if ($details->settings['display'] === 'user') 	   { echo "SELECTED"; } ?>>Another users photos</option>
+                <option value="celebs"  <?php if ($details->settings['display'] === 'celebs') 	   { echo "SELECTED"; } ?>>Celebrities</option>
                 <option value="tags" 	    <?php if ($details->settings['display'] === 'tags') 	   { echo "SELECTED"; } ?>>Tagged photos</option>
                 <option value="location"  <?php if ($details->settings['display'] === 'location')  { echo "SELECTED"; } ?>>From a Location</option>
               </select>
@@ -187,6 +191,33 @@
                 <div class="wpinstagram_widget_loader"></div>
               </p>
               <div id="otherUserResults"></div>
+            </div>
+	    <div id="celebs">
+		<span class="block">
+                     <span class="block-arrow"></span>
+                     Pick a celebrity to display in the widget area:
+                </span>
+                <label>
+                  <span class="help-icon dashicons dashicons-info">
+                    <span class="block">
+			Celebrity	
+                      <span class="block-arrow"></span>
+			These are the top Instagram users.
+                    </span>
+                  </span>
+                </label>                
+                <select name="celebPick" class="widefat">
+                  <option value="18428658" <?php if ($details->settings['celebPick'] === '18428658') { echo "SELECTED"; } ?>>Kim Kardashian West</option>
+                  <option value="11830955" <?php if ($details->settings['celebPick'] === '11830955') { echo "SELECTED"; } ?>>Taylor Swift</option>
+                  <option value="208560325" <?php if ($details->settings['celebPick'] === '208560325') { echo "SELECTED"; } ?>>Khloe Kardashian</option>
+                  <option value="451573056" <?php if ($details->settings['celebPick'] === '451573056') { echo "SELECTED"; } ?>>Nicki Minaj</option>
+                  <option value="12281817" <?php if ($details->settings['celebPick'] === '12281817') { echo "SELECTED"; } ?>>Kylie Jenner</option>
+                  <option value="6380930" <?php if ($details->settings['celebPick'] === '6380930') { echo "SELECTED"; } ?>>Kendall Jenner</option>
+                  <option value="6860189" <?php if ($details->settings['celebPick'] === '6860189') { echo "SELECTED"; } ?>>Justin Bieber</option>
+                  <option value="7719696" <?php if ($details->settings['celebPick'] === '7719696') { echo "SELECTED"; } ?>>Ariana Grande</option>
+                  <option value="460563723" <?php if ($details->settings['celebPick'] === '460563723') { echo "SELECTED"; } ?>>Selena Gomez</option>
+                  <option value="462151702" <?php if ($details->settings['celebPick'] === '462151702') { echo "SELECTED"; } ?>>Beyonce</option>
+                </select>
             </div>
             <div id="tags">
               <p style="margin-bottom: 0px;">
@@ -545,6 +576,7 @@
         tag3		        : jQuery('#form<?php print $instance['db_id'] ?> input[name=tag3]').val(),
         tag4		        : jQuery('#form<?php print $instance['db_id'] ?> input[name=tag4]').val(),
         width		        : jQuery('#form<?php print $instance['db_id'] ?> input[name=width]').val(),        
+        celebPick	        : jQuery('#form<?php print $instance['db_id'] ?> input[name=celebPick]').val(),        
         height		      : jQuery('#form<?php print $instance['db_id'] ?> input[name=height]').val(),
         method		      : jQuery('#form<?php print $instance['db_id'] ?> select[name=method]').val(),
         cols		        : jQuery('#form<?php print $instance['db_id'] ?> select[name=cols]').val(),
@@ -665,11 +697,15 @@
           jQuery('#form<?php print $instance['db_id'] ?> #anotherUser').hide();          
           jQuery('#form<?php print $instance['db_id'] ?> #location').hide();
           jQuery('#form<?php print $instance['db_id'] ?> #tags').hide();
+          jQuery('#form<?php print $instance['db_id'] ?> #celebs').hide();
           jQuery('#form<?php print $instance['db_id'] ?> #gridOptions').hide();
           jQuery('#form<?php print $instance['db_id'] ?> .slideshowOptions').hide();
           
           if (jQuery('#form<?php print $instance['db_id'] ?> #display').val() == 'tags') {
             jQuery('#form<?php print $instance['db_id'] ?> #tags').show();
+          }
+          if (jQuery('#form<?php print $instance['db_id'] ?> #display').val() == 'celebs') {            
+            jQuery('#form<?php print $instance['db_id'] ?> #celebs').show();
           }
           if (jQuery('#form<?php print $instance['db_id'] ?> #display').val() == 'user') {            
             jQuery('#form<?php print $instance['db_id'] ?> #anotherUser').show();
