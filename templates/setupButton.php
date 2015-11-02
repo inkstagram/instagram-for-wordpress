@@ -195,14 +195,13 @@
 	    <div id="celebs">
 		<span class="block">
                      <span class="block-arrow"></span>
-                     Pick a celebrity to display in the widget area:
                 </span>
                 <label>
+                     Pick a celebrity to display in the widget area:
                   <span class="help-icon dashicons dashicons-info">
                     <span class="block">
-			Celebrity	
                       <span class="block-arrow"></span>
-			These are the top Instagram users.
+			These celebrities are the most popular Instagram users.
                     </span>
                   </span>
                 </label>                
@@ -299,7 +298,7 @@
                 <span class="help-icon dashicons dashicons-info">
                   <span class="block">
                     <span class="block-arrow"></span>
-                    Choose the number of rows and columns you wish to show in your grid.
+                    Choose the number of rows and columns you wish to show in your grid. (max 33 pics). 
                   </span>
                 </span>
               </label>
