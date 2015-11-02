@@ -308,6 +308,10 @@
                 <option value="2"	<?php if ($details->settings['cols'] === '2') { echo "SELECTED"; } ?>>2</option>
                 <option value="3"	<?php if ($details->settings['cols'] === '3') { echo "SELECTED"; } ?>>3</option>
                 <option value="4"	<?php if ($details->settings['cols'] === '4') { echo "SELECTED"; } ?>>4</option>
+                <option value="5"	<?php if ($details->settings['cols'] === '5') { echo "SELECTED"; } ?>>5</option>
+                <option value="6"	<?php if ($details->settings['cols'] === '6') { echo "SELECTED"; } ?>>6</option>
+                <option value="7"	<?php if ($details->settings['cols'] === '7') { echo "SELECTED"; } ?>>7</option>
+                <option value="8"	<?php if ($details->settings['cols'] === '8') { echo "SELECTED"; } ?>>8</option>
               </select>
                by 
               <select name="rows" class="widefat short">
@@ -315,6 +319,10 @@
                 <option value="2"	<?php if ($details->settings['rows'] === '2') { echo "SELECTED"; } ?>>2</option>
                 <option value="3"	<?php if ($details->settings['rows'] === '3') { echo "SELECTED"; } ?>>3</option>
                 <option value="4"	<?php if ($details->settings['rows'] === '4') { echo "SELECTED"; } ?>>4</option>
+                <option value="5"	<?php if ($details->settings['rows'] === '5') { echo "SELECTED"; } ?>>5</option>
+                <option value="6"	<?php if ($details->settings['rows'] === '6') { echo "SELECTED"; } ?>>6</option>
+                <option value="7"	<?php if ($details->settings['rows'] === '7') { echo "SELECTED"; } ?>>7</option>
+                <option value="8"	<?php if ($details->settings['rows'] === '8') { echo "SELECTED"; } ?>>8</option>
               </select>
             </p>
             <p class="slideshowOptions">
